@@ -18,11 +18,17 @@ public class AddingProductsToCarts_1 {
 		driver.manage().window().maximize();
 		
 		List<WebElement> productsList = driver.findElements(By.xpath("//h4[@class='product-name']"));
+		
+		//System.out.println(productsList);
 		Thread.sleep(3000);
 		for(int i =0; i< productsList.size(); i++) {
 			String productname = productsList.get(i).getText();
-			if(productsList.contains("Cucumber")) {
-				driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();		
+			productname.split("-");
+			String formattedname  = productname.trim();
+			
+			System.out.println(formattedname);
+			if(formattedname.contains("Cucumber")) {
+				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();		
 				break;
 			}
 		}
