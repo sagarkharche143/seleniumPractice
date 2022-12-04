@@ -24,7 +24,7 @@ public class Alert_java {
 		driver.findElement(By.id("confirmbtn")).click();
 		System.out.println(driver.switchTo().alert().getText());
 	//  if you want to cancel
-		driver.switchTo().alert().dismiss();
+		driver.switchTo().alert().accept();
 		
 		
 		

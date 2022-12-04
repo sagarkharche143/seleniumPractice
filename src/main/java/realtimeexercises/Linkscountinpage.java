@@ -17,7 +17,7 @@ public class Linkscountinpage {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://qaclickacademy.com/practice.php");
-		//1. total link on whole page--> link always given in anchortag inside div so take tagname as "a"
+		//1. total link on whole page--> link always given in anchortag inside div or href so take tagname as "a" blindly
 		System.out.println(driver.findElements(By.tagName("a")).size());
 		// 2.link count in footer
 		//Limiting the driver to footer 
