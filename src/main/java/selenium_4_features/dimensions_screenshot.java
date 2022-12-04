@@ -18,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class dimensions_screenshot {
 
 
+	/****************Added comment for checking************************/
 	public static void main(String[] args) throws IOException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
