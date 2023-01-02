@@ -19,6 +19,11 @@ public class DropdownStatic {
 		WebElement CurrencyDD = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 		Select CurrencyDropdown = new Select(CurrencyDD);
 		CurrencyDropdown.selectByValue("USD");
+		System.out.println(CurrencyDropdown.getFirstSelectedOption().getText());
+		/* there is only one dropdown is present so used getFirstSelectedOption
+		 * if there is multiple dropdown use getAllSelectedOptions().
+		 */
+		
 
 	}
 
