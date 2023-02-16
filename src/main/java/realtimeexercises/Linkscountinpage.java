@@ -28,7 +28,8 @@ public class Linkscountinpage {
 		System.out.println(columndriver.findElements(By.tagName("a")).size());
 		//4. click on each link in column and check it is opening or  not and print title of each link
 		// press control and click on link to open in seperate tab
-		for (int i=1;i<columndriver.findElements(By.tagName("a")).size();i++) {
+		for (int i=1;i<columndriver.findElements(By.tagName("a")).size();i++)
+		{
 			String clickonfootercollink = Keys.chord(Keys.CONTROL,Keys.ENTER);
 			columndriver.findElements(By.tagName("a")).get(i).sendKeys(clickonfootercollink);
 			Thread.sleep(5000);
@@ -37,7 +38,8 @@ public class Linkscountinpage {
 		Set<String> window = driver.getWindowHandles();
 		Iterator<String> it =window.iterator();
 		// printing title of each tab
-		while(it.hasNext()) {
+		while(it.hasNext())
+		{
 			driver.switchTo().window(it.next());
 			System.out.println(driver.getTitle());
 		}

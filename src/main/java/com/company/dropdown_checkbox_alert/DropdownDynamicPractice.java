@@ -17,8 +17,24 @@ public class DropdownDynamicPractice {
 		driver.manage().window().maximize();
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 		driver.findElement(By.xpath("//a[@value='MAA']")).click();
-		driver.findElement(By.xpath("//a[@value='BLR']")).click();
-	
+		Thread.sleep(2000);
+	//	driver.findElement(By.xpath("(//a[@value='BLR'])[2]"))	.click();
+		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='BLR']")).click();
+		
+		/*
+		 * driver.findElement(By.xpath("//a[@value='BLR']")) .click(); I have wrap this
+		 * in (//a[@value='BLR'])[2] because it showing 2 elements, 1 from city and
+		 * another 1 from to city
+		 */
+		 
 		}
+	public void parentChildRelationship(WebDriver driver)
+	{
+		/* we are selecting the to city using parent-child relationship xpath because some of the client not
+		accept code wrote using index*/
+	// ParentXpath ChildXpath	
+		
+		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] a//[@value='BLR'")).click();
+	}
  
 }

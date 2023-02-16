@@ -17,16 +17,14 @@ public class DropdownAutoSuggestive {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		driver.manage().window().maximize();
-		driver.findElement(By.id("autosuggest")).sendKeys("Ind");
+		driver.findElement(By.id("autosuggest")).sendKeys("ind");
 		Thread.sleep(3000);
 		List<WebElement> Options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
 		for(WebElement option : Options) {
 		if(option.getText().equalsIgnoreCase("India")) {
 			option.click();
+			break;
 		}
-		
-		
-		
 		
 		}
 			

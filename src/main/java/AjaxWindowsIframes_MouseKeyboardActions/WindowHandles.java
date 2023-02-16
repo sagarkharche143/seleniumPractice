@@ -31,7 +31,7 @@ public class WindowHandles {
 		//grabbing the text from child window
 		System.out.println(driver.findElement(By.cssSelector(".im-para.red")).getText());
 		
-		// Parse the string to get actual text you want ==> Debug-->Right click --> watch
+		// Parse the string to get actual text you want ==> Debug-->select-->Right click --> watch
 
 		String email = driver.findElement(By.cssSelector(".im-para.red")).getText().split("at")[1].trim().split(" ")[0];
 		

@@ -27,12 +27,10 @@ public class locators2 {
 		System.out.println(driver.findElement(By.xpath("//p")).getText());
 		Assert.assertEquals(driver.findElement(By.xpath("//p")).getText(), "You are successfully logged in.");
 		System.out.println(driver.findElement(By.xpath("//div[@class='login-container']/h2")).getText());
-		// Assert.assertEquals(driver.findElement(By.xpath("//div[@class='login-container']/h2")).getText(),"Hello"
-		// +name+",");
+		 Assert.assertEquals(driver.findElement(By.xpath("//div[@class='login-container']/h2")).getText(),"Hello "+name+",");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[text()='Log Out']")).click();
 		
-
 	}
 	
 	public static String getpassword(WebDriver driver) throws InterruptedException
@@ -40,8 +38,9 @@ public class locators2 {
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.findElement(By.linkText("Forgot your password?")).click();
 		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[contains(text(),'Reset Login')]")).click();
 	//	driver.findElement(By.xpath("//button[text()='Reset Login'")).click();
-		driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
+	//	driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
 		String Passwordtext = driver.findElement(By.cssSelector("p.infoMsg")).getText();
 		String[] passwordarray = Passwordtext.split("'");
 		/*Please use temporary password 'rahulshettyacademy' to Login

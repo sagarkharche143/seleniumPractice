@@ -33,7 +33,7 @@ public class AddingProductsToCarts_2 {
 		 * String[] productname = productsList.get(i).getText().split("-"); String
 		 * formattedProductName = productname[0].trim(); // convert array into arraylist
 		 * for search // check productname is present in arraylist or not List
-		 * productsToBeOrder2 = Arrays.asList(productsToBeOrder); if
+		 * productsToBeOrder2 = Arrays.asList(productsToBeOrder); if	
 		 * (productsToBeOrder2.contains(formattedProductName)) { j++;
 		 * 
 		 * // click on add to cart
@@ -78,6 +78,8 @@ public class AddingProductsToCarts_2 {
 				j++;
 
 				// click on add to cart
+			//	driver.findElement(By.xpath("//button[text()='ADD TO CART'"));
+			//	Text is changing from add to cart to added for sometime so text not work properly
 				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
 
 				if (j == (productsToBeOrder).length) {

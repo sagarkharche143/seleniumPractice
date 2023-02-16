@@ -16,13 +16,15 @@ public class ActionsDemo {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.com/");
 		Actions act = new Actions(driver);
-		WebElement move = driver.findElement(By.id("nav-link-accountList"));
 		
+		WebElement move = driver.findElement(By.id("nav-link-accountList"));
+	
 		//send capital letter in textbox and select
 		act.moveToElement(driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
 		
 		// moves to specific element - mouse hover
-		act.moveToElement(move).build().perform();
+		act.moveToElement(move).contextClick().build().perform();
+		
 
 	}
 

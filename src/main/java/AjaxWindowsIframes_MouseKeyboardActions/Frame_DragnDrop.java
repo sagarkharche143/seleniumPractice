@@ -23,6 +23,8 @@ public class Frame_DragnDrop {
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
 		act.dragAndDrop(source, target).build().perform();
+		
+	//	driver.switchTo().defaultContent();
 
 	}
 

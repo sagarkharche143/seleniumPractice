@@ -33,6 +33,7 @@ public class Locators {
 		driver.findElement(By.cssSelector("input#inputUsername")).sendKeys("Rahul");
 		driver.findElement(By.xpath("//input[@name='inputPassword']")).sendKeys("rahulshettyacademy");
 		driver.findElement(By.xpath("//button[contains(@class,'signInBtn')]")).click();
+		System.out.println(driver.findElement(By.tagName("p")).getText());
 
 	}
 

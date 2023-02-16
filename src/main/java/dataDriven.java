@@ -47,6 +47,8 @@ public class dataDriven {
 						Iterator<Cell> cel = row.cellIterator();
 						while (cel.hasNext()) {
 							System.out.println(cel.next().getStringCellValue());
+							
+					//create arraylist to send data in actual testcase
 						}
 					}
 				}
